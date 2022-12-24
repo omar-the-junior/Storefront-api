@@ -1,0 +1,23 @@
+{
+  "prod": {
+    "driver": "pg",
+    "database": { "ENV": "POSTGRES_PROD_DB" },
+    "user": { "ENV": "POSTGRES_USER" },
+    "password": { "ENV": "POSTGRES_PASSWORD" },
+    "host": { "ENV": "HOST" }
+  },
+  "test": {
+    "driver": "pg",
+    "database": { "ENV": "POSTGRES_TEST_DB" },
+    "user": { "ENV": "POSTGRES_USER" },
+    "password": { "ENV": "POSTGRES_PASSWORD" },
+    "host": { "ENV": "HOST" }
+  },
+  "dev": {
+    "driver": "pg",
+    "database": { "ENV": "POSTGRES_DEV_DB" },
+    "user": { "ENV": "POSTGRES_USER" },
+    "password": { "ENV": "POSTGRES_PASSWORD" },
+    "host": { "ENV": "HOST" }
+  }
+}
