@@ -52,19 +52,20 @@
 
 ## Server setup instructions
 
+`npm start` to migrate tables and start the API in production
+
+`npm watchTS` to migrate tables and start the API in development without converting typescript code to JS
+
 ### **Note** Database migrations happen automatically before starting the server 
 
 ### Incase you need to migrate the db manually 
 
-`npx db-migrate -e test up` to migrate test tables
+- `npx db-migrate -e test up` to migrate test tables
 
-`npx db-migrate -e dev up` to migrate development tables
+- `npx db-migrate -e dev up` to migrate development tables
 
-`npx db-migrate -e prod up` to migrate production tables
+- `npx db-migrate -e prod up` to migrate production tables
 
-`npm start` to migrate tables and start the API in production
-
-`npm watchTS` to migrate tables and start the API in development without converting typescript code to JS
 
 ---
 ## TESTING
