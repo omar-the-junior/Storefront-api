@@ -38,6 +38,6 @@ const create = async (req, res, next) => {
 const usersRoutes = (app) => {
     app.get("/users", authentication_1.default, index);
     app.get("/users/:userId", authentication_1.default, show);
-    app.post("/users/create", authentication_1.default, create);
+    app.post("/users/create", create);
 };
 exports.default = usersRoutes;

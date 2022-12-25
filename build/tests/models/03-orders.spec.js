@@ -24,7 +24,6 @@ describe("Model tests for orders", () => {
             ];
         });
         it("Should create a new order", async function () {
-            console.log(this.orders[0].products[0]);
             expect(this.orders[0].products[0]).toEqual({
                 id: 1,
                 order_id: 1,
