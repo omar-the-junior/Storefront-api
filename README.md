@@ -1,6 +1,7 @@
 # Storefront Backend Project
 
-## To install packages use
+## check project REQUIREMENTS [here](REQUIREMENTS.md) to set it up correctly. 
+## To install packages use node package manager and run
 `npm install`
 
 ------
