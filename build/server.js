@@ -20,6 +20,16 @@ app.get("/", function (_req, res) {
 (0, products_1.default)(app);
 (0, users_1.default)(app);
 (0, orders_1.default)(app);
+// (async function () {
+//   const createdUser = await request(app)
+//     .post("/users/create")
+//     .query({ first_name: "Mike", last_name: "Tyson", password: "Champ123" })
+//     .expect(200);
+//   const token = createdUser.body.token;
+//   const userInfo = createdUser.body.user;
+//   console.log(token, userInfo);
+// })();
 app.listen(PORT || 3000, function () {
     console.log(`starting app on: http://${address}`);
 });
+exports.default = app;

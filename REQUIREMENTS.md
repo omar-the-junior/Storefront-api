@@ -117,7 +117,7 @@
 
 #### Users
 - Index [token required] `GET` /users 
-- Show [token required]  `GET` /users/{user_id}
+- Show [token required]  `GET` /users/show/{user_id}
 - Create [Generates a token] `POST` /users/create?first_name={user_firstname}&last_name={user_lastname}&password={user_password}
 
 #### Orders

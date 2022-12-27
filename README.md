@@ -32,7 +32,7 @@
 ### Users 
 
 - #### show user
-  - `GET` http://127.0.0.1:3000/users/{user_id}
+  - `GET` http://127.0.0.1:3000/users/show/{user_id}
 
 - #### create user
   - `POST` http://127.0.0.1:3000/users/create?first_name={user_firsname}&last_name={user_lastname}&password={userpassword}

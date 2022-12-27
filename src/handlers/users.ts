@@ -36,7 +36,7 @@ const create = async (req: Request, res: Response, next: NextFunction) => {
 };
 const usersRoutes = (app: Application) => {
   app.get("/users", validateToken, index);
-  app.get("/users/:userId", validateToken, show);
+  app.get("/users/show/:userId", validateToken, show);
   app.post("/users/create", create);
 };
 export default usersRoutes;
