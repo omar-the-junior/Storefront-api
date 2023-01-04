@@ -18,14 +18,14 @@ describe("Endpoint test for /orders", () => {
     );
     this.token = plainToken;
   });
-  it("Should return 401 due to unauthorized token for /orders/current route", async function (this: AccessToken) {
+  it("Should return response with code 200 (ok) fore /orders/current route", async function (this: AccessToken) {
     const response = await request
       .get("/orders/current")
       .auth(this.token, { type: "bearer" })
       .query({ user_id: 1 });
     expect(response.status).toBe(200);
   });
-  it("Should return 401 due to unauthorized token for /orders/complete route", async function (this: AccessToken) {
+  it("Should return response with code 200 (ok) fore /orders/current route", async function (this: AccessToken) {
     const response = await request
       .get("/orders/complete")
       .auth(this.token, { type: "bearer" })
