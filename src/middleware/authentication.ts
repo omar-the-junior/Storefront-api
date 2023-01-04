@@ -11,7 +11,7 @@ const validateToken = async (
     const { JWT_SECRET } = process.env;
 
     const [bearer, token] = req.headers.authorization?.split(" ") as string[];
-    const tokenIsValid = jwt.verify(token, String(JWT_SECRET));
+    jwt.verify(token, String(JWT_SECRET));
     next();
   } catch (error) {
     res.status(401).send("You are unauthorized");

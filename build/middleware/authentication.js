@@ -10,7 +10,7 @@ const validateToken = async (req, res, next) => {
     try {
         const { JWT_SECRET } = process.env;
         const [bearer, token] = req.headers.authorization?.split(" ");
-        const tokenIsValid = jsonwebtoken_1.default.verify(token, String(JWT_SECRET));
+        jsonwebtoken_1.default.verify(token, String(JWT_SECRET));
         next();
     }
     catch (error) {

@@ -30,6 +30,7 @@ class OrderStore {
         ]);
         const createdOrder = await connection.query(productOrderQuery, productOrders);
         order.products = createdOrder.rows;
+        connection.release();
         return order;
     }
     async currentOrder(id) {
@@ -37,6 +38,7 @@ class OrderStore {
             const connection = await database_1.default.connect();
             const sql = `SELECT * FROM orders WHERE user_id = $1 AND status = $2`;
             const result = await connection.query(sql, [id, "active"]);
+            connection.release();
             return result.rows;
         }
         catch (error) {
@@ -53,6 +55,7 @@ class OrderStore {
             const connection = await database_1.default.connect();
             const sql = "SELECT * FROM orders WHERE user_id = $1 AND status = $2";
             const result = await connection.query(sql, [id, "complete"]);
+            connection.release();
             return result.rows;
         }
         catch (error) {

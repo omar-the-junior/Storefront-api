@@ -53,6 +53,7 @@ export class OrderStore {
 
     order.products = createdOrder.rows;
 
+    connection.release();
     return order;
   }
 
@@ -61,6 +62,8 @@ export class OrderStore {
       const connection = await Client.connect();
       const sql = `SELECT * FROM orders WHERE user_id = $1 AND status = $2`;
       const result = await connection.query(sql, [id, "active"]);
+      connection.release();
+
       return result.rows;
     } catch (error) {
       if (error instanceof Error) {
@@ -76,6 +79,8 @@ export class OrderStore {
       const connection = await Client.connect();
       const sql = "SELECT * FROM orders WHERE user_id = $1 AND status = $2";
       const result = await connection.query(sql, [id, "complete"]);
+      connection.release();
+
       return result.rows;
     } catch (error) {
       if (error instanceof Error) {
